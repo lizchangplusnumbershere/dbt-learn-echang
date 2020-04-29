@@ -7,7 +7,7 @@ version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
 name: 'jaffle_shop'
-profile: 'default'
+profile: 'jaffle_shop'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -34,6 +34,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
 name: 'jaffle_shop'
   my_new_project:
-      materialized: table
       example:
           materialized: view
