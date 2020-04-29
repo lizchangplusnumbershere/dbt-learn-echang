@@ -2,7 +2,7 @@ WITH amounts AS (
 SELECT 
   p."orderID" AS order_id
 , SUM(ROUND(p.amount/100,2)) AS amount
-FROM raw.stripe.payment p
+FROM {{ source('stripe_new', 'payment') }} p
 GROUP BY 1
 )
 select 

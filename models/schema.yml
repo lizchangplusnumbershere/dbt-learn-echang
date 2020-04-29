@@ -14,6 +14,7 @@ models:
         description: Total orders in lifetime
       - name: lifetime_value
         description: Total value of historical orders
+        tests: 
           - not_null
   - name: orders
     description: This model is the final cleanup of order data
